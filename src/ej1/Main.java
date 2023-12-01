@@ -4,39 +4,48 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import ej1.Operaciones;
 
+
+//invocas a dios
+import java.lang.Object;
+
+
+
 public class Main {
 
+	//creación de scanner
+	static Scanner sc=new Scanner(System.in);
+	
 	public static void main(String[] args) {
 
-		//creación de scanner
-		Scanner sc=new Scanner(System.in);
 		
-		Operaciones op=new Operaciones();
+		Operaciones op;
 		
 		//
-		double n1,n2;
+		double n1,n2,resultado;
 		int opcion;
 		
 		opcion=menu();
-		
 		
 		//
 		n1=pideNumero();
 		
 		n2=pideNumero();
 
-		op
+		//op
+		op=new Operaciones(n1,n2);
 		
 		//
 		switch(opcion) {
 		
 		case 1:{
+			resultado=Operaciones.suma();
+			System.out.println(resultado);
 			
-		}
+		}//caso suma
 		
 		case 2:{
 			
-		}
+		}//caso resta
 		
 		case 3:{
 			
@@ -63,18 +72,16 @@ public class Main {
 		}
 		
 
-		
-		
 		//cierre de scanner
 		sc.close();
+		
+		
 		
 	}
 	
 	//
 	public static int menu() {
 
-		//creación de scanner
-		Scanner sc=new Scanner(System.in);
 		
 		int opcion=-1;
 
@@ -102,20 +109,12 @@ public class Main {
 			
 		}while(opcion<0||opcion>6);
 		
-
-		
-
-		//cierre de scanner
-		sc.close();
-		
-		
 		return opcion;
 	}
 	
+	//funcion que te permite introducir un 
 	public static double pideNumero() {
 
-		//creación de scanner
-		Scanner sc=new Scanner(System.in);
 		
 		double n=0;
 		
@@ -129,7 +128,7 @@ public class Main {
 				n=sc.nextInt();
 				
 			}catch(InputMismatchException e){
-				System.out.println("El valor introducido no con");
+				System.out.println("El valor introducido no es entero");
 			}
 			
 		}while(n>=0);
