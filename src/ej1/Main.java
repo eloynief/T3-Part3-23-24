@@ -44,27 +44,28 @@ public class Main {
 		}//caso suma
 		
 		case 2:{
+			resultado=Operaciones.resta();
 			
 		}//caso resta
 		
 		case 3:{
-			
+			resultado=Operaciones.multiplicacion();
 		}
 		
 		case 4:{
-			
+			resultado=Operaciones.division();
 		}
 		
 		case 5:{
-			
+			resultado=Operaciones.max();
 		}
 		
 		case 6:{
-			
+			resultado=Operaciones.min();
 		}
 		
 		case 0:{
-			
+			System.out.println("SALIENDO DEL PROGRAMA");
 		}
 		
 		
